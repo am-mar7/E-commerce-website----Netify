@@ -139,6 +139,6 @@ EMAIL_HOST_USER = "ammaralaa470@gmail.com"
 EMAIL_HOST_PASSWORD = "nwfo ldlf zklr wmbt "    
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
-STRIPE_SECRET_KEY = 'sk_test_51RxZ6hGxGy5tRPgEnoEP2WLKk1lOj8rtalMVPPbDGXvwORXDkqPQQ2zOuqPC5UdA24n3B5NChBK6psmZqswzMLYZ00WnwjUuzt'
+STRIPE_SECRET_KEY = 'put your secret key here for stripe'
 
-STRIPE_PUBLISHABLE_KEY = 'pk_test_51RxZ6hGxGy5tRPgE8L6INhdHWrJb3lYyOeLHmXPDRi6atMzT4BuqGFiTANK9Mry2xLwxZRTRO74i2fVo8qG82yJf00NDrEzRmm'
+STRIPE_PUBLISHABLE_KEY = 'put your public key here for stripe'
