@@ -26,6 +26,8 @@ It integrates **payment processing via Stripe**, stores and manages data using a
    ```bash
    git clone https://github.com/am-mar7/Netify.git
    cd Netify
+   in settings.py put your secret and public key
+   you will find them hashd 
    ```
 
 2. **Backend setup**
