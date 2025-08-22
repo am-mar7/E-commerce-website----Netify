@@ -22,9 +22,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-# SECRET_KEY = 'Put Your stripe secrect key here'
+SECRET_KEY = 'django-insecure-@*n+)u-en4w@aue$_azlv#u)bk9)=i=mg5j2a7lebch87#gdnv'
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
+
 DEBUG = True
 
 ALLOWED_HOSTS = []
@@ -139,6 +141,6 @@ EMAIL_HOST_USER = "put your email"
 # EMAIL_HOST_PASSWORD = "put your hosting password"    
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
-# STRIPE_SECRET_KEY = 'put your secret key here for stripe'
+STRIPE_SECRET_KEY = 'sk_test_51RxZ6hGxGy5tRPgEnoEP2WLKk1lOj8rtalMVPPbDGXvwORXDkqPQQ2zOuqPC5UdA24n3B5NChBK6psmZqswzMLYZ00WnwjUuzt'
 
-# STRIPE_PUBLISHABLE_KEY = 'put your public key here for stripe'
+STRIPE_PUBLISHABLE_KEY = 'pk_test_51RxZ6hGxGy5tRPgE8L6INhdHWrJb3lYyOeLHmXPDRi6atMzT4BuqGFiTANK9Mry2xLwxZRTRO74i2fVo8qG82yJf00NDrEzRmm'

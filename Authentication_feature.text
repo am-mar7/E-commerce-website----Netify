@@ -1,0 +1,10 @@
+first step will be updating front end 
+    - adding sign up and login buttons into nav bar 
+    - adding side bar using media query
+    - creating login and signup pages
+    - creating a hidden page called "my projects that only appears when after logining or signing up"
+
+second step will be conecting changes with back-end
+    - adding function for signup and login pages in view.py and making their urls in urls.py
+    - making the signup/login sends the user to (my products page) so it can load the user's projects
+    - adding icon for what's app chat in (my projects) page  
