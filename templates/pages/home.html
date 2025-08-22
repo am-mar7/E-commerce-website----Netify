@@ -1,0 +1,119 @@
+{% extends 'base.html'%}
+
+{% load static %}
+
+
+{% block content %}
+    <section class="hero">
+        <div class="content">
+            <h1><span>Build Your Dream Website with Netfiy</span></h1>
+            <p>
+                Turn your ideas into reality with a professional, modern, and responsive website.
+                At Netfiy, we design and develop websites that help your business stand out and grow online.
+                1`Whether you need a personal portfolio, an e-commerce store, or a full business platform — we’ve got you covered.
+            </p>
+        </div>
+
+        <div class="container">
+            <img src="{% static 'Images/hero.jpg' %}" alt="photo">
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="cards">
+            <div class="card">
+                <h2>Security 🔐</h2>
+                <p>
+                    Built with <strong>Django</strong>, Netfiy websites come with enterprise-grade security features by default. 
+                    From protection against SQL injection and cross-site scripting to secure authentication, 
+                    your data and your customers are always safe.
+                </p>    
+                <div class="container">
+                    <img src="{% static 'Images/security.jpg' %}" alt="">
+                </div>              
+            </div>
+            
+            <div class="card">
+                <h2>Speed 🚀</h2>
+                <p>
+                    Built with <strong>Django</strong>, Netfiy websites are engineered for maximum speed 
+                    by default. From rapid load times to seamless interactions, your users always enjoy a 
+                    lightning-fast experience
+                </p>    
+                <div class="container">
+                    <img src="{% static 'Images/speed.webp' %}" alt="">
+                </div>              
+            </div>
+
+            <div class="card">
+                <h2>Design 🖍</h2>
+                <p>
+                    Built with <strong>Django</strong>, Netfiy websites feature elegant, modern designs by 
+                    default. From sleek layouts to intuitive interfaces, your users always enjoy a visually 
+                    stunning experience
+                </p>    
+                <div class="container">
+                    <img src="{% static 'Images/idea.png' %}" alt="">
+                </div>              
+            </div>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="title">
+            <h1>Choose the perfect plan for you</h1>
+        </div>
+        <div class="cards">
+            <div class="card toggle">
+                <h1>{{packages.0.name}}</h1>
+                <h2>{{packages.0.price}} $</h2>
+                <ul>
+                    <li>modern design</li>
+                    <li>1-2 pages</li>
+                    <li>Simple design</li>
+                    <li>Contact form</li>
+                    <li>Responsive design</li>
+                    <li>Email support</li>
+                </ul>
+                <div class="btncontainer">
+                    <a href="{% url 'checkout' 'starter' 59 'price_1RxcfMGxGy5tRPgERSTr3zhZ' %}"><button class="buyingbtn hidden">start now</button></a>
+                </div>
+            </div>
+
+            <div class="card toggle active">
+                <h1>{{packages.1.name}}</h1>
+                <h2>{{packages.1.price}} $</h2>
+                <ul>
+                    <li>Up to 6 pages</li>
+                    <li>Professional design</li>
+                    <li>SEO optimization</li>
+                    <li>Professional email setup</li>
+                    <li>Free hosting for 3 months</li>
+                    <li>Social media integration</li>
+                </ul>
+                <div class="btncontainer">
+                    <a href="{% url 'checkout' 'business' 99 'price_1RxcffGxGy5tRPgE2SuP2T7q' %}"><button class="buyingbtn hidden">start now</button></a>
+                </div>
+            </div>
+
+            <div class="card toggle">
+                <h1>{{packages.2.name}}</h1>
+                <h2>{{packages.2.price}} $</h2>
+                <ul>
+                    <li>Custom design & branding</li>
+                    <li>Unlimited pages</li>
+                    <li>Advanced CMS dashboard</li>
+                    <li>API & payment integration</li>
+                    <li>SSL + security</li>
+                    <li>1-year hosting + domain</li>
+                    <li>24/7 premium support</li>
+                    <li>Analytics & reports</li>
+                </ul>
+                <div class="btncontainer">
+                    <a href="{% url 'checkout' 'enterprises' 199 'price_1RxcffGxGy5tRPgE2SuP2T7q' %}"><button class="buyingbtn hidden">start now</button></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock content %}

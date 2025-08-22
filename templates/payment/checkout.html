@@ -1,0 +1,87 @@
+{% extends 'base.html'%}
+{% load static %}
+
+{% block content %}
+    <form method="post" action="{% url 'save_UserPayment' %}">
+    <!-- Checkout Container -->
+        <div class="checkout-container">
+            <!-- Billing & Shipping Form -->
+            <div class="billing-form">
+                <h2>Billing & Shipping</h2>            
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="fname">First Name</label>
+                        <input type="text" id="fname" name="fname" placeholder="John" required>
+                        <input type="hidden" name="price_id"  value="{{price_id}}">
+                        <input type="hidden" name="price" value="{{ price|add:'60' }}">
+                        <input type="hidden" name="name" value="{{name}}">
+                        <input type="hidden" name="price"  value="{{price}}">
+                    </div>
+                    <div class="form-group">
+                        <label for="lname">Last Name</label>
+                        <input type="text" id="lname" name="lname" placeholder="Doe" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="text" id="phone" name="phone" placeholder="+20 123 456 789" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <textarea id="address" name="address" rows="3" placeholder="Street, City, State"></textarea>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="city">City</label>
+                        <input type="text" id="city" name="city" placeholder="Cairo">
+                    </div>
+                    <div class="form-group">
+                        <label for="zip">ZIP / Postal Code</label>
+                        <input type="text" id="zip" name="zip" placeholder="12345">
+                    </div>
+                </div>
+
+                <!-- Payment Method -->
+                <div class="payment-method">
+                    <h3>Payment Method</h3>
+                    <div class="method">
+                        <input type="radio" id="card" name="payment" checked>
+                        <label for="card">Credit / Debit Card</label>
+                    </div>
+                    <div class="method">
+                        <input type="radio" id="paypal" name="payment">
+                        <label for="paypal">PayPal</label>
+                    </div>
+                </div>            
+            </div>
+
+        <!-- Order Summary -->
+            <div class="order-summary">
+                <h2>Order Summary</h2>
+                <div class="item">
+                    <span>Website Design</span>
+                    <span>{{price}}</span>
+                </div>
+                <div class="item">
+                    <span>Hosting</span>
+                    <span>$50</span>
+                </div>
+                <div class="item">
+                    <span>Domain</span>
+                    <span>$10</span>
+                </div>
+                <div class="total">
+                    <span>Total</span>
+                    <span>{{price|add:"60"}}</span>
+                </div>
+                <!-- <a href="{% url 'checkout_session' %}?name={{ name }}&price={{ price|add:'60' }}&price_id={{ price_id }}"> -->
+                    <button type="submit">Buy Now</button>
+                <!-- </a> -->
+            </div>
+        </div>
+    </form>    
+{% endblock content %}
